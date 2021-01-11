@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Faculty from './components/Faculty'
+import Faculties from './components/Faculties'
 
-render(<Faculty />,
+render(<Faculties />,
   document.getElementById('root'))
