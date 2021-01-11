@@ -1,9 +1,10 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Search from './Search'
 import Faculty from './Faculty'
 
 export default () => {
-  const [F, setF] = useState('')
+  const [searchTerm, setSearchTerm] = useState('')
   const [facultyList, setFacultyList] = useState([])
 
   useEffect(() => {
@@ -14,12 +15,15 @@ export default () => {
     }
     pullData()
   }, [])
+  useEffect(() => {
+
+  }, [searchTerm])
 
   return (
     <div className="page">
       <div className="title">Meet the Faculty</div>
       <div className="subtitle">A searchable list of all our faculty!</div>
-      <input type="text" name="search" onChange={event => setF(event.target.value)} />
+      <Search term={searchTerm} setter={setSearchTerm} />
       {
         facultyList.map(faculty => (<Faculty key={faculty.id} id={faculty.id} name={faculty.name} />))
       }
