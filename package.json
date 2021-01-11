@@ -1,0 +1,48 @@
+{
+  "name": "school-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "./node_modules/.bin/webpack --progress --inline --config webpack.dev.js",
+    "dev:server": "./node_modules/.bin/env-cmd ./node_modules/.bin/babel-watch server.js",
+    "dev:migrate": "./node_modules/.bin/env-cmd ./node_modules/.bin/sequelize db:migrate --env development --config ./configs/sequelize.js",
+    "lint": "./node_modules/.bin/eslint --format codeframe --ext jsx .",
+    "lint:fix": "./node_modules/.bin/eslint --fix --format codeframe ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shabnam2016/school-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shabnam2016/school-ui/issues"
+  },
+  "homepage": "https://github.com/shabnam2016/school-ui#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "pug": "^3.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "env-cmd": "^10.1.0",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "pug-lint": "^2.6.0",
+    "webpack": "^5.12.3",
+    "webpack-cli": "^4.3.1"
+  }
+}
