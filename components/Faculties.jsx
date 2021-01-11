@@ -1,7 +1,7 @@
-import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Search from './Search'
 import Faculty from './Faculty'
+import { filterFaculty, retrieveFaculty } from '../utils/faculty'
 
 export default () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -10,15 +10,15 @@ export default () => {
 
   useEffect(() => {
     async function pullData() {
-      const { data } = await axios.get('http://localhost:1337/api/faculty')
+      const faculties = await retrieveFaculty()
 
-      setFacultyList(data)
-      setFilteredFacultyList(data)
+      setFacultyList(faculties)
+      setFilteredFacultyList(faculties)
     }
     pullData()
   }, [])
   useEffect(() => {
-    const filtered = facultyList.filter(faculty => faculty.name.toLowerCase().includes(searchTerm.toLowerCase()))
+    const filtered = filterFaculty(facultyList, searchTerm)
 
     setFilteredFacultyList(filtered)
   }, [searchTerm])
