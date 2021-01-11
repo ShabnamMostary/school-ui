@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
 export default () => {
-  const [faculty, setFaculty] = useState('')
+  const [Faculty, setFaculty] = useState('')
   const [facultyList, setFacultyList] = useState([])
 
   useEffect(() => {
@@ -19,6 +19,10 @@ export default () => {
       <div className="title">Meet the Faculty</div>
       <div className="subtitle">A searchable list of all our faculty!</div>
       <input type="text" name="search" onChange={event => setFaculty(event.target.value)} />
+      {
+        facultyList.map(faculty => (<div>{`${faculty.name}`}</div>))
+      }
+
     </div>
   )
 }
