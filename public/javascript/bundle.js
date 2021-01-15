@@ -305,6 +305,17 @@ eval("\n\nvar bind = __webpack_require__(/*! ./helpers/bind */ \"./node_modules/
 
 /***/ }),
 
+/***/ "./actions/faculty.js":
+/*!****************************!*\
+  !*** ./actions/faculty.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (async () => {\n  const {\n    data\n  } = await axios__WEBPACK_IMPORTED_MODULE_0___default().get(`${\"http://localhost:1337/api\"}/faculty`); // eslint-disable-line no-undef\n\n  return data;\n});\n\n//# sourceURL=webpack://school-ui/./actions/faculty.js?");
+
+/***/ }),
+
 /***/ "./client.jsx":
 /*!********************!*\
   !*** ./client.jsx ***!
@@ -356,7 +367,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"filterFaculty\": () => /* binding */ filterFaculty,\n/* harmony export */   \"retrieveFaculty\": () => /* binding */ retrieveFaculty\n/* harmony export */ });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n\nconst filterFaculty = (list, term) => list.filter(faculty => faculty.name.toLowerCase().includes(term.toLowerCase()));\nconst retrieveFaculty = async () => {\n  const {\n    data\n  } = await axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://localhost:1337/api/faculty');\n  return data;\n};\n\n//# sourceURL=webpack://school-ui/./utils/faculty.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"filterFaculty\": () => /* binding */ filterFaculty,\n/* harmony export */   \"retrieveFaculty\": () => /* binding */ retrieveFaculty\n/* harmony export */ });\n/* harmony import */ var _actions_faculty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/faculty */ \"./actions/faculty.js\");\n\nconst filterFaculty = (list, term) => list.filter(faculty => faculty.name.toLowerCase().includes(term.toLowerCase()));\nconst retrieveFaculty = async () => {\n  const faculty = await (0,_actions_faculty__WEBPACK_IMPORTED_MODULE_0__.default)();\n  return faculty;\n};\n\n//# sourceURL=webpack://school-ui/./utils/faculty.js?");
 
 /***/ }),
 

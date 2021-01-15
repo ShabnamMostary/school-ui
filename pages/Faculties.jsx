@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Search from './Search'
-import Faculty from './Faculty'
+import Search from '../components/Search'
+import Faculty from '../components/Faculty'
 import { filterFaculty, retrieveFaculty } from '../utils/faculty'
 
 export default () => {
