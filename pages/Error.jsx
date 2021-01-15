@@ -1,9 +1,9 @@
 import React from 'react'
+import Title from '../components/Title'
 
 export default () => (
   <div className="page">
-    <div className="title">Meet the Faculty</div>
-    <div className="subtitle">A searchable list of all our faculty</div>
+    <Title />
     <div>Sorry, unable to find the page you are looking for</div>
   </div>
 )

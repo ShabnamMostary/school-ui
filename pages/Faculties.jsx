@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Search from '../components/Search'
 import Faculty from '../components/Faculty'
+import Title from '../components/Title'
 import { filterFaculty, retrieveFaculty } from '../utils/faculty'
 
 export default () => {
@@ -25,8 +26,7 @@ export default () => {
 
   return (
     <div className="page">
-      <div className="title">Meet the Faculty</div>
-      <div className="subtitle">A searchable list of all our faculty.</div>
+      <Title />
       <Search term={searchTerm} setter={setSearchTerm} />
       {
         filteredFacultyList.map(faculty => (<Faculty key={faculty.id} id={faculty.id} name={faculty.name} />))
