@@ -1,5 +1,5 @@
 import React from 'react'
 
-export default () => (
-  <div className="page" />
+export default ({ children }) => (
+  <div className="page">{children}</div>
 )

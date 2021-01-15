@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Page from '../components/Page'
 import Search from '../components/Search'
 import Faculty from '../components/Faculty'
 import Title from '../components/Title'
@@ -25,13 +26,12 @@ export default () => {
   }, [searchTerm])
 
   return (
-    <div className="page">
+    <Page>
       <Title />
       <Search term={searchTerm} setter={setSearchTerm} />
       {
         filteredFacultyList.map(faculty => (<Faculty key={faculty.id} id={faculty.id} name={faculty.name} />))
       }
-
-    </div>
+    </Page>
   )
 }
