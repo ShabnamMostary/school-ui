@@ -8,6 +8,7 @@ import ErrorPage from './pages/Error'
 render(<BrowserRouter>
   <Switch>
     <Route exact path="/" component={FacultyPage} />
+    <Route path="*" component={ErrorPage} />
   </Switch>
 </BrowserRouter>,
 document.getElementById('root'))
