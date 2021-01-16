@@ -1,4 +1,4 @@
-import fetchFacultyDetails from '../actions/facultyDetails'
+import fetchFacultyDetails from '../actions/FacultyDetails'
 
 export const getFacultyNameFromUrl = location => (location && location.pathname
   ? location.pathname.split('/faculty/').pop()
