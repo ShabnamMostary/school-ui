@@ -11,8 +11,8 @@ const Link = styled(NavLink) `
 `
 
 export default ({ id, name }) => (
-  <Faculty key={id} className="faculty">
-    <Link to={`/faculty/${id}`}>
+  <Faculty key={id}>
+    <Link to={`/faculty/${name}`}>
       {`${name}`}
     </Link>
   </Faculty>
