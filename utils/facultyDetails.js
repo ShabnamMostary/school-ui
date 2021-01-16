@@ -14,4 +14,10 @@ export const retrieveFaculty = async (location) => {
   } = await fetchFacultyDetails(facultyName)
 
   if (!id || !name || !departmentId || !email || !research_area) return { details: {} }
+
+  return {
+    details: {
+      id, name, departmentId, email, research_area,
+    },
+  }
 }
