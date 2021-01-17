@@ -3,6 +3,7 @@ import Page from '../components/Page'
 import Title from '../components/Title'
 import FacultyDetails from '../components/FacultyDetails'
 import { retrieveFaculty } from '../utils/facultyDetails'
+import NotFound from '../components/NotFound'
 
 export default ({ location }) => {
   const [facultyName, setFacultyName] = useState('')
@@ -33,7 +34,7 @@ export default ({ location }) => {
               />
             </>
           )
-          : (<div>Sorry, I do not know that team</div>)
+          : (<NotFound message="Sorry, no matching faculty found." />)
       }
     </Page>
 
