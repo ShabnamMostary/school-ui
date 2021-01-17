@@ -13,15 +13,15 @@ export default ({ name, email, departmentId, research_area }) => (
     <h3>{`${name}`}</h3>
     <div>
       Email:
-      {`${email}`}
+      {` ${email}`}
     </div>
     <div>
-      Department ID :
-      {`${departmentId}`}
+      Department ID:
+      {` ${departmentId}`}
     </div>
     <div>
-      Research Interest :
-      {`${research_area}`}
+      Research Interest:
+      {` ${research_area}`}
     </div>
   </Details>
 )
