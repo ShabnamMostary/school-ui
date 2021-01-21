@@ -4,6 +4,7 @@ import Title from '../components/Title'
 import FacultyDetails from '../components/FacultyDetails'
 import { retrieveFaculty } from '../utils/facultyDetails'
 import NotFound from '../components/NotFound'
+import GoBack from '../components/GoBack'
 
 export default ({ location }) => {
   const [facultyName, setFacultyName] = useState('')
@@ -22,6 +23,7 @@ export default ({ location }) => {
   return (
     <Page>
       <Title />
+      <GoBack />
       {
         facultyName
           ? (
