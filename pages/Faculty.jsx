@@ -19,6 +19,27 @@ export default ({ location }) => {
     }
     pullData()
   }, [])
+  const getDepartmentFromId = (id) => {
+    let name = ''
+
+    // eslint-disable-next-line default-case
+    switch (id) {
+      case 1:
+        name = 'Computer Engineering'
+        break
+      case 2:
+        name = 'Electrical Engineering'
+        break
+      case 3:
+        name = 'Mechanical Engineering'
+        break
+      case 4:
+        name = 'Civil Engineering'
+        break
+    }
+
+    return name
+  }
 
   return (
     <Page>
@@ -31,7 +52,7 @@ export default ({ location }) => {
               <FacultyDetails
                 name={faculty.name}
                 email={faculty.email}
-                departmentId={faculty.departmentId}
+                departmentId={getDepartmentFromId(faculty.departmentId)}
                 research_area={faculty.research_area}
               />
             </>

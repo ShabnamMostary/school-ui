@@ -16,7 +16,7 @@ export default ({ name, email, departmentId, research_area }) => (
       {` ${email}`}
     </div>
     <div>
-      Department ID:
+      Department:
       {` ${departmentId}`}
     </div>
     <div>

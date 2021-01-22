@@ -8,6 +8,7 @@ const Faculty = styled.div `
 `
 const Link = styled(NavLink) `
   text-decoration: none;
+  color:black;
 `
 
 export default ({ id, name }) => (
