@@ -5,11 +5,14 @@ const Icon = styled.div `
   font-size: 36px;
   margin: 20px 0;
   text-align: center;
+  color:white;
 `
 
 const Message = styled.div `
   font-size: 20px;
   text-align: center;
+  padding-bottom:20px;
+  color:white;
 `
 
 export default ({ message }) => (

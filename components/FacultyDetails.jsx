@@ -6,6 +6,14 @@ const Details = styled.div `
   font-weight: 400;
   margin: 20px 0;
   text-align: center;
+  color:#ffffff ;
+  > h3 {
+    font-weight:bold;
+    font-size:25px;
+  }
+  > div {
+    padding:5px;
+    }
 `
 
 export default ({ name, email, departmentId, research_area }) => (
